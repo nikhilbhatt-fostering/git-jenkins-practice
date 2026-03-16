@@ -4,13 +4,13 @@ pipeline {
     environment {
         GIT_REPO_URL    = 'https://github.com/nikhilbhatt-fostering/git-jenkins-practice.git'
         GIT_BRANCH      = 'main'
-        TOMCAT_HOST     = '10.88.0.62'        // ← podman container IP
+        TOMCAT_HOST     = '192.168.123.109'        // ← podman container IP
         TOMCAT_PORT     = '8085'
         TOMCAT_USER     = 'admin'
         TOMCAT_PASSWORD = 'admin'
-        APP_NAME        = 'crud-app'
+        APP_NAME        = 'java-crud'
         WAR_FILE        = 'target/java-crud-web-1.0.war'
-        APP_URL         = "http://${TOMCAT_HOST}:${TOMCAT_PORT}/${APP_NAME}/employees/"
+        APP_URL         = "http://${TOMCAT_HOST}:${TOMCAT_PORT}/${APP_NAME}/index.jsp"
     }
 
     tools {
